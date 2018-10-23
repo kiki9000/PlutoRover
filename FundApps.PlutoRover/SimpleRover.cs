@@ -10,7 +10,23 @@ namespace FundApps.PlutoRover
     /// </summary>
     public class SimpleRover : ISimpleMachine
     {
+        public SimpleRover() : this(100, 100)
+        {
+        }
+
+        public SimpleRover(int maxX, int maxY)
+        {
+            this.maxX = maxX;
+            this.maxY = maxY;
+        }
+
+        private readonly int maxX = 100;
+        private readonly int maxY = 100;
+
         SimpleTelemetry currentPosition = new SimpleTelemetry(0, 0, SimpleOrientation.North);
+
+        public int MaxX => maxX;
+        public int MaxY => maxY;
 
         #region ISimpleMachine implementation
 
@@ -67,21 +83,42 @@ namespace FundApps.PlutoRover
 
         private void Move(int steps)
         {
+            int newX = currentPosition.X;
+            int newY = currentPosition.Y;
+
             switch (currentPosition.Orientation)
             {
                 case SimpleOrientation.North:
-                    currentPosition.X += steps;
+                    newX += steps;
                     break;
                 case SimpleOrientation.East:
-                    currentPosition.Y += steps;
+                    newY += steps;
                     break;
                 case SimpleOrientation.South:
-                    currentPosition.X -= steps;
+                    newX -= steps;
                     break;
                 case SimpleOrientation.West:
-                    currentPosition.Y -= steps;
+                    newY -= steps;
                     break;
             }
+
+            if ((newX > maxX) || (newX < 0))
+                newX = Wrap(newX, maxX);
+            if ((newY > maxY) || (newY < 0))
+                    newY = Wrap(newY, maxY);
+
+            currentPosition.X = newX;
+            currentPosition.Y = newY;
+        }
+
+        int Wrap(int kX, int max)
+        {
+            int range_size = max + 1;
+
+            if (kX < 0)
+                kX += range_size * ((0 - kX) / range_size + 1);
+
+            return kX % range_size;
         }
 
         private void ReportObsticle() => throw new NotImplementedException();
