@@ -10,28 +10,20 @@ namespace FundApps.PlutoRover
     /// </summary>
     public struct SimpleTelemetry
     {
-        public int X
+        internal SimpleTelemetry(int x, int y, SimpleOrientation o)
         {
-            get => default;
-            set
-            {
-            }
+            this.X = x;
+            this.Y = y;
+            this.Orientation = o;
         }
 
-        public int Y
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public int X;
+        public int Y;
+        public SimpleOrientation Orientation;
 
-        public SimpleOrientation Orientation
+        public override string ToString()
         {
-            get => default;
-            set
-            {
-            }
+            return $"{X},{Y},{Orientation}";
         }
     }
 }

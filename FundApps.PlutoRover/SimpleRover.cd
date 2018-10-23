@@ -3,7 +3,7 @@
   <Class Name="FundApps.PlutoRover.SimpleRover">
     <Position X="6.25" Y="0.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AIAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AIAAAAAAAIAAAgAIAAAAAAACEAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SimpleRover.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -19,7 +19,7 @@
   <Struct Name="FundApps.PlutoRover.SimpleTelemetry">
     <Position X="2.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <HashCode>AAAAAAAAAQAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
       <FileName>SimpleTelemetry.cs</FileName>
     </TypeIdentifier>
   </Struct>
