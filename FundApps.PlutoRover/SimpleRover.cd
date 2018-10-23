@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Struct Name="FundApps.PlutoRover.SimpleTelemetry">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>SimpleTelemetry.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="FundApps.PlutoRover.ISimpleMachine">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ISimpleMachine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FundApps.PlutoRover.ISimpleCommand">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>ISimpleCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="FundApps.PlutoRover.SimpleOrientation">
+    <Position X="2.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABACQ=</HashCode>
+      <FileName>SimpleOrientation.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

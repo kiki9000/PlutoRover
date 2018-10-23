@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundApps.PlutoRover", "FundApps.PlutoRover.csproj", "{DEF3B10F-180C-4F34-8B08-F0A5A7C7D9B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundApps.PlutoRoverTest", "..\FundApps.PlutoRoverTest\FundApps.PlutoRoverTest.csproj", "{9C3CC633-A2F9-4EE0-874D-78F91B262486}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DEF3B10F-180C-4F34-8B08-F0A5A7C7D9B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEF3B10F-180C-4F34-8B08-F0A5A7C7D9B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEF3B10F-180C-4F34-8B08-F0A5A7C7D9B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C3CC633-A2F9-4EE0-874D-78F91B262486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C3CC633-A2F9-4EE0-874D-78F91B262486}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C3CC633-A2F9-4EE0-874D-78F91B262486}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C3CC633-A2F9-4EE0-874D-78F91B262486}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
