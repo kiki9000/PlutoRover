@@ -10,6 +10,8 @@ namespace FundApps.PlutoRover
     /// </summary>
     public class SimpleRover : ISimpleMachine
     {
+        public event EventHandler ObstacleDetected;
+
         public SimpleRover() : this(100, 100)
         {
         }
@@ -53,7 +55,7 @@ namespace FundApps.PlutoRover
                             break;
                         default:
                             ReportObsticle();
-                            break;
+                            return;
                     }
                 }
             }
@@ -121,7 +123,10 @@ namespace FundApps.PlutoRover
             return kX % range_size;
         }
 
-        private void ReportObsticle() => throw new NotImplementedException();
+        private void ReportObsticle() {
+            if (ObstacleDetected != null)
+                ObstacleDetected(this, null);
+        }
 
         #endregion
     }

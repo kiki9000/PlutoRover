@@ -176,6 +176,29 @@ namespace FundApps.PlutoRoverTest
         /// 
         /// </summary>
         [TestMethod]
+        public void EventTest()
+        {
+            object obstacleSender = null;
+
+            MoveCommand moveCommand = new MoveCommand() { Data = "FxFFR" };
+            SimpleRover rover = new SimpleRover();
+            rover.ObstacleDetected += delegate (object sender, EventArgs e)
+            {
+                obstacleSender = sender;
+            };
+
+            rover.ExecuteCommand(moveCommand);
+            SimpleTelemetry st = rover.GetTelemetry();
+            Assert.AreEqual(1, st.X);
+            Assert.AreEqual(0, st.Y);
+            Assert.AreEqual(SimpleOrientation.North, st.Orientation);
+            Assert.AreEqual(obstacleSender, rover);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [TestMethod]
         public void ExampleTest()
         {
             // Requirement 1:
