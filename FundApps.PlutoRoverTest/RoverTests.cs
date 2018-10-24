@@ -24,15 +24,15 @@ namespace FundApps.PlutoRoverTest
             rover.ExecuteCommand(moveForward);
             
             st = rover.GetTelemetry();
-            Assert.AreEqual(1, st.X);
-            Assert.AreEqual(0, st.Y);
+            Assert.AreEqual(1, st.Y);
+            Assert.AreEqual(0, st.X);
             Assert.AreEqual(SimpleOrientation.North, st.Orientation);
 
             //step backward
             rover.ExecuteCommand(moveBackward);
             st = rover.GetTelemetry();
-            Assert.AreEqual(0, st.X);
             Assert.AreEqual(0, st.Y);
+            Assert.AreEqual(0, st.X);
             Assert.AreEqual(SimpleOrientation.North, st.Orientation);
         }
 
@@ -50,36 +50,36 @@ namespace FundApps.PlutoRoverTest
             //rotate 1 right, to the east
             rover.ExecuteCommand(rotateRight);
             st = rover.GetTelemetry();
-            Assert.AreEqual(0, st.X);
             Assert.AreEqual(0, st.Y);
+            Assert.AreEqual(0, st.X);
             Assert.AreEqual(SimpleOrientation.East, st.Orientation);
 
             //rotate 1 left, to the south
             rover.ExecuteCommand(rotateRight);
             st = rover.GetTelemetry();
-            Assert.AreEqual(0, st.X);
             Assert.AreEqual(0, st.Y);
+            Assert.AreEqual(0, st.X);
             Assert.AreEqual(SimpleOrientation.South, st.Orientation);
 
             //rotate 1 left, to the west
             rover.ExecuteCommand(rotateRight);
             st = rover.GetTelemetry();
-            Assert.AreEqual(0, st.X);
             Assert.AreEqual(0, st.Y);
+            Assert.AreEqual(0, st.X);
             Assert.AreEqual(SimpleOrientation.West, st.Orientation);
 
             //rotate 1 left, to the north
             rover.ExecuteCommand(rotateRight);
             st = rover.GetTelemetry();
-            Assert.AreEqual(0, st.X);
             Assert.AreEqual(0, st.Y);
+            Assert.AreEqual(0, st.X);
             Assert.AreEqual(SimpleOrientation.North, st.Orientation);
 
             //...and final 1 left to the east
             rover.ExecuteCommand(rotateRight);
             st = rover.GetTelemetry();
-            Assert.AreEqual(0, st.X);
             Assert.AreEqual(0, st.Y);
+            Assert.AreEqual(0, st.X);
             Assert.AreEqual(SimpleOrientation.East, st.Orientation);
 
 
@@ -89,36 +89,36 @@ namespace FundApps.PlutoRoverTest
             // after 1 right we should be looking north
             rover.ExecuteCommand(rotateLeft);
             st = rover.GetTelemetry();
-            Assert.AreEqual(0, st.X);
             Assert.AreEqual(0, st.Y);
+            Assert.AreEqual(0, st.X);
             Assert.AreEqual(SimpleOrientation.North, st.Orientation);
 
             //rotate 1 right, to the west
             rover.ExecuteCommand(rotateLeft);
             st = rover.GetTelemetry();
-            Assert.AreEqual(0, st.X);
             Assert.AreEqual(0, st.Y);
+            Assert.AreEqual(0, st.X);
             Assert.AreEqual(SimpleOrientation.West, st.Orientation);
 
             //rotate 1 right, to the south
             rover.ExecuteCommand(rotateLeft);
             st = rover.GetTelemetry();
-            Assert.AreEqual(0, st.X);
             Assert.AreEqual(0, st.Y);
+            Assert.AreEqual(0, st.X);
             Assert.AreEqual(SimpleOrientation.South, st.Orientation);
 
             //rotate 1 right, to the east
             rover.ExecuteCommand(rotateLeft);
             st = rover.GetTelemetry();
-            Assert.AreEqual(0, st.X);
             Assert.AreEqual(0, st.Y);
+            Assert.AreEqual(0, st.X);
             Assert.AreEqual(SimpleOrientation.East, st.Orientation);
 
             //rotate 1 right, to the north
             rover.ExecuteCommand(rotateLeft);
             st = rover.GetTelemetry();
-            Assert.AreEqual(0, st.X);
             Assert.AreEqual(0, st.Y);
+            Assert.AreEqual(0, st.X);
             Assert.AreEqual(SimpleOrientation.North, st.Orientation);
         }
 
@@ -143,22 +143,22 @@ namespace FundApps.PlutoRoverTest
             moveCommand = new MoveCommand() { Data = "FF" };
             rover.ExecuteCommand(moveCommand);
             st = rover.GetTelemetry();
-            Assert.AreEqual(2, st.X);
-            Assert.AreEqual(0, st.Y);
+            Assert.AreEqual(2, st.Y);
+            Assert.AreEqual(0, st.X);
             Assert.AreEqual(SimpleOrientation.North, st.Orientation);
             // move 2 backward
             moveCommand = new MoveCommand() { Data = "BB" };
             rover.ExecuteCommand(moveCommand);
             st = rover.GetTelemetry();
-            Assert.AreEqual(0, st.X);
             Assert.AreEqual(0, st.Y);
+            Assert.AreEqual(0, st.X);
             Assert.AreEqual(SimpleOrientation.North, st.Orientation);
             // rotate right
             moveCommand = new MoveCommand() { Data = "R" };
             rover.ExecuteCommand(moveCommand);
             st = rover.GetTelemetry();
-            Assert.AreEqual(0, st.X);
             Assert.AreEqual(0, st.Y);
+            Assert.AreEqual(0, st.X);
             Assert.AreEqual(SimpleOrientation.East, st.Orientation);
             // move 101 forward
             string steps = string.Empty;
@@ -167,8 +167,8 @@ namespace FundApps.PlutoRoverTest
             moveCommand = new MoveCommand() { Data = steps };
             rover.ExecuteCommand(moveCommand);
             st = rover.GetTelemetry();
-            Assert.AreEqual(0, st.X);
             Assert.AreEqual(0, st.Y);
+            Assert.AreEqual(0, st.X);
             Assert.AreEqual(SimpleOrientation.East, st.Orientation);
         }
 
@@ -189,8 +189,8 @@ namespace FundApps.PlutoRoverTest
 
             rover.ExecuteCommand(moveCommand);
             SimpleTelemetry st = rover.GetTelemetry();
-            Assert.AreEqual(1, st.X);
-            Assert.AreEqual(0, st.Y);
+            Assert.AreEqual(1, st.Y);
+            Assert.AreEqual(0, st.X);
             Assert.AreEqual(SimpleOrientation.North, st.Orientation);
             Assert.AreEqual(obstacleSender, rover);
         }

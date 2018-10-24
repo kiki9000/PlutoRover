@@ -91,16 +91,16 @@ namespace FundApps.PlutoRover
             switch (currentPosition.Orientation)
             {
                 case SimpleOrientation.North:
-                    newX += steps;
-                    break;
-                case SimpleOrientation.East:
                     newY += steps;
                     break;
+                case SimpleOrientation.East:
+                    newX += steps;
+                    break;
                 case SimpleOrientation.South:
-                    newX -= steps;
+                    newY -= steps;
                     break;
                 case SimpleOrientation.West:
-                    newY -= steps;
+                    newX -= steps;
                     break;
             }
 
@@ -113,14 +113,15 @@ namespace FundApps.PlutoRover
             currentPosition.Y = newY;
         }
 
-        int Wrap(int kX, int max)
+        int Wrap(in int val, in int max)
         {
-            int range_size = max + 1;
+            int rangeSize = max + 1;
+            int x = val;
 
-            if (kX < 0)
-                kX += range_size * ((0 - kX) / range_size + 1);
+            if (x < 0)
+                x += rangeSize * ((0 - x) / rangeSize + 1);
 
-            return kX % range_size;
+            return x % rangeSize;
         }
 
         private void ReportObsticle() {
